@@ -1,4 +1,4 @@
-local CheatVersion = "BETA 1.5"
+local CheatVersion = "1.5"
 
 
 for _,v in pairs(game.workspace.Collectibles:GetChildren()) do
