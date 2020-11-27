@@ -1305,7 +1305,7 @@ _5MinuteButton_.TextWrapped = true
 
 SULEYMAN.Name = "Sound"
 SULEYMAN.SoundId = "rbxassetid://499315619"
-SULEYMAN.Volume = 10
+SULEYMAN.Volume = 2
 SULEYMAN.Pitch = 1
 SULEYMAN.Looped = false
 SULEYMAN.archivable = false
@@ -1332,7 +1332,7 @@ end)
 
 CURA.Name = "Sound"
 CURA.SoundId = "rbxassetid://4743160925"
-CURA.Volume = 10
+CURA.Volume = 2
 CURA.Pitch = 1
 CURA.Looped = false
 CURA.archivable = false
@@ -1359,7 +1359,7 @@ end)
 
 RegiiRomaniei.Name = "Sound"
 RegiiRomaniei.SoundId = "rbxassetid://5734523419"
-RegiiRomaniei.Volume = 10
+RegiiRomaniei.Volume = 2
 RegiiRomaniei.Pitch = 1
 RegiiRomaniei.Looped = false
 RegiiRomaniei.archivable = false
@@ -1386,7 +1386,7 @@ end)
 
 Ambanidemaenerveaza.Name = "Sound"
 Ambanidemaenerveaza.SoundId = "rbxassetid://1302369025"
-Ambanidemaenerveaza.Volume = 10
+Ambanidemaenerveaza.Volume = 2
 Ambanidemaenerveaza.Pitch = 1
 Ambanidemaenerveaza.Looped = false
 Ambanidemaenerveaza.archivable = false
@@ -1413,7 +1413,7 @@ end)
 
 NicolaeGutaGIGOLO.Name = "Sound"
 NicolaeGutaGIGOLO.SoundId = "rbxassetid://1724302175"
-NicolaeGutaGIGOLO.Volume = 10
+NicolaeGutaGIGOLO.Volume = 2
 NicolaeGutaGIGOLO.Pitch = 1
 NicolaeGutaGIGOLO.Looped = false
 NicolaeGutaGIGOLO.archivable = false
@@ -1440,7 +1440,7 @@ end)
 
 NicolaeGutaLamamaia.Name = "Sound"
 NicolaeGutaLamamaia.SoundId = "rbxassetid://716838826"
-NicolaeGutaLamamaia.Volume = 10
+NicolaeGutaLamamaia.Volume = 2
 NicolaeGutaLamamaia.Pitch = 1
 NicolaeGutaLamamaia.Looped = false
 NicolaeGutaLamamaia.archivable = false
@@ -1467,7 +1467,7 @@ end)
 
 NicolaeGutaLoculunu.Name = "Sound"
 NicolaeGutaLoculunu.SoundId = "rbxassetid://1659703481"
-NicolaeGutaLoculunu.Volume = 10
+NicolaeGutaLoculunu.Volume = 2
 NicolaeGutaLoculunu.Pitch = 1
 NicolaeGutaLoculunu.Looped = false
 NicolaeGutaLoculunu.archivable = false
@@ -1494,7 +1494,7 @@ end)
 
 NicolaeGutaDiamantele.Name = "Sound"
 NicolaeGutaDiamantele.SoundId = "rbxassetid://1515452005"
-NicolaeGutaDiamantele.Volume = 10
+NicolaeGutaDiamantele.Volume = 2
 NicolaeGutaDiamantele.Pitch = 1
 NicolaeGutaDiamantele.Looped = false
 NicolaeGutaDiamantele.archivable = false
@@ -1521,7 +1521,7 @@ end)
 
 NicolaeGutaBaterie.Name = "Sound"
 NicolaeGutaBaterie.SoundId = "rbxassetid://2653680851"
-NicolaeGutaBaterie.Volume = 10
+NicolaeGutaBaterie.Volume = 2
 NicolaeGutaBaterie.Pitch = 1
 NicolaeGutaBaterie.Looped = false
 NicolaeGutaBaterie.archivable = false
@@ -1548,7 +1548,7 @@ end)
 
 DaniNicolaeChampionsLeague.Name = "Sound"
 DaniNicolaeChampionsLeague.SoundId = "rbxassetid://990030171"
-DaniNicolaeChampionsLeague.Volume = 10
+DaniNicolaeChampionsLeague.Volume = 2
 DaniNicolaeChampionsLeague.Pitch = 1
 DaniNicolaeChampionsLeague.Looped = false
 DaniNicolaeChampionsLeague.archivable = false
@@ -1575,7 +1575,7 @@ end)
 
 JadorIndiferenta.Name = "Sound"
 JadorIndiferenta.SoundId = "rbxassetid://3874473514"
-JadorIndiferenta.Volume = 10
+JadorIndiferenta.Volume = 2
 JadorIndiferenta.Pitch = 1
 JadorIndiferenta.Looped = false
 JadorIndiferenta.archivable = false
@@ -1602,7 +1602,7 @@ end)
 
 JadorMireasa.Name = "Sound"
 JadorMireasa.SoundId = "rbxassetid://3786562923"
-JadorMireasa.Volume = 10
+JadorMireasa.Volume = 2
 JadorMireasa.Pitch = 1
 JadorMireasa.Looped = false
 JadorMireasa.archivable = false
@@ -1629,7 +1629,7 @@ end)
 
 JadorLasatiosabea.Name = "Sound"
 JadorLasatiosabea.SoundId = "rbxassetid://5346226607"
-JadorLasatiosabea.Volume = 10
+JadorLasatiosabea.Volume = 2
 JadorLasatiosabea.Pitch = 1
 JadorLasatiosabea.Looped = false
 JadorLasatiosabea.archivable = false
@@ -1656,7 +1656,7 @@ end)
 
 LinoJadorDaumoda.Name = "Sound"
 LinoJadorDaumoda.SoundId = "rbxassetid://4821551570"
-LinoJadorDaumoda.Volume = 10
+LinoJadorDaumoda.Volume = 2
 LinoJadorDaumoda.Pitch = 1
 LinoJadorDaumoda.Looped = false
 LinoJadorDaumoda.archivable = false
@@ -1683,7 +1683,7 @@ end)
 
 JadorNuamsomn.Name = "Sound"
 JadorNuamsomn.SoundId = "rbxassetid://5825254018"
-JadorNuamsomn.Volume = 10
+JadorNuamsomn.Volume = 2
 JadorNuamsomn.Pitch = 1
 JadorNuamsomn.Looped = false
 JadorNuamsomn.archivable = false
