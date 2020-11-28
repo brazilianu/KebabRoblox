@@ -4,7 +4,7 @@
 -- Gui to Lua PLUGIN
 -- Instances:
 
-local CheatVersion = "1.0.2"
+local CheatVersion = "1.1.0"
 
 for _, v in pairs(game.workspace.Collectibles:GetChildren()) do
     if string.find(v.Name, "") then v:Destroy() end
@@ -26,9 +26,17 @@ local blue = Color3.new(0.96078431372, 0.61568627451, 0.16470588235)
 -- NOCLIP
 noclip = false
 game:GetService('RunService').Stepped:connect(function()
-    if noclip then
-        game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
-    end
+if noclip then
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+plr = game.Players.LocalPlayer
+mouse = plr:GetMouse()
+mouse.KeyDown:connect(function(key)
+if key == "o" then
+noclip = not noclip
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
 end)
 
 
@@ -191,10 +199,7 @@ do
     FieldSelected = Instance.new("TextLabel")
     AutoHoneyMaking = Instance.new("TextButton")
     UICorner_11 = Instance.new("UICorner")
-    CancelHoneyMaking = Instance.new("TextButton")
     UICorner_12 = Instance.new("UICorner")
-    FarmingOptions = Instance.new("Frame")
-    FarmingOptionsText = Instance.new("TextLabel")
     ConvertTime = Instance.new("TextLabel")
     FarmingTime = Instance.new("TextLabel")
     ConvertTimeText = Instance.new("TextLabel")
@@ -626,7 +631,7 @@ NicolaeGutaDiamantele1515452005.Position =
     UDim2.new(0.0384615399, 0, 0.239845678, 0)
 NicolaeGutaDiamantele1515452005.Size = UDim2.new(0, 167, 0, 23)
 NicolaeGutaDiamantele1515452005.Font = Enum.Font.SourceSans
-NicolaeGutaDiamantele1515452005.Text = "Nicolae Guta - Dimantele"
+NicolaeGutaDiamantele1515452005.Text = "Nicolae Guta - Si .. valoare"
 NicolaeGutaDiamantele1515452005.TextColor3 = Color3.fromRGB(255, 255, 255)
 NicolaeGutaDiamantele1515452005.TextSize = 16.000
 NicolaeGutaDiamantele1515452005.TextWrapped = true
@@ -1027,8 +1032,8 @@ StartFarming.Name = "Start Farming"
 StartFarming.Parent = FarmingPage
 StartFarming.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 StartFarming.BackgroundTransparency = 0.650
-StartFarming.Position = UDim2.new(0.397786379, 0, 0.0979166627, 0)
-StartFarming.Size = UDim2.new(0, 141, 0, 28)
+StartFarming.Position = UDim2.new(-0, 0, 0.0979166627, 0)
+StartFarming.Size = UDim2.new(0, 200, 0, 28)
 StartFarming.Font = Enum.Font.Oswald
 StartFarming.Text = "Start Farming"
 StartFarming.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -1057,10 +1062,10 @@ AutoHoneyMaking.Name = "Auto Honey Making"
 AutoHoneyMaking.Parent = FarmingPage
 AutoHoneyMaking.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 AutoHoneyMaking.BackgroundTransparency = 0.650
-AutoHoneyMaking.Position = UDim2.new(0.397786379, 0, 0.2868056, 0)
-AutoHoneyMaking.Size = UDim2.new(0, 141, 0, 29)
+AutoHoneyMaking.Position = UDim2.new(0.0, 0, 0.2868056, 0)
+AutoHoneyMaking.Size = UDim2.new(0, 200, 0, 29)
 AutoHoneyMaking.Font = Enum.Font.Oswald
-AutoHoneyMaking.Text = "Auto Honey Making"
+AutoHoneyMaking.Text = "Force Cancel Auto Farm"
 AutoHoneyMaking.TextColor3 = Color3.fromRGB(255, 255, 255)
 AutoHoneyMaking.TextSize = 22.000
 AutoHoneyMaking.TextWrapped = true
@@ -1068,238 +1073,7 @@ AutoHoneyMaking.TextWrapped = true
 UICorner_11.CornerRadius = UDim.new(0, 2)
 UICorner_11.Parent = AutoHoneyMaking
 
-CancelHoneyMaking.Name = "Cancel Honey Making"
-CancelHoneyMaking.Parent = FarmingPage
-CancelHoneyMaking.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-CancelHoneyMaking.BackgroundTransparency = 0.650
-CancelHoneyMaking.Position = UDim2.new(0.397786379, 0, 0.459027946, 0)
-CancelHoneyMaking.Size = UDim2.new(0, 141, 0, 28)
-CancelHoneyMaking.Font = Enum.Font.Oswald
-CancelHoneyMaking.Text = "Cancel Auto Honey Making"
-CancelHoneyMaking.TextColor3 = Color3.fromRGB(255, 255, 255)
-CancelHoneyMaking.TextSize = 18.000
-CancelHoneyMaking.TextWrapped = true
 
-UICorner_12.CornerRadius = UDim.new(0, 2)
-UICorner_12.Parent = CancelHoneyMaking
-
-FarmingOptions.Name = "FarmingOptions"
-FarmingOptions.Parent = FarmingPage
-FarmingOptions.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-FarmingOptions.BackgroundTransparency = 0.750
-FarmingOptions.Position = UDim2.new(0, 0, 0.0944444463, 0)
-FarmingOptions.Size = UDim2.new(0, 226, 0, 157)
-
-FarmingOptionsText.Name = "FarmingOptionsText"
-FarmingOptionsText.Parent = FarmingOptions
-FarmingOptionsText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-FarmingOptionsText.BackgroundTransparency = 1.000
-FarmingOptionsText.BorderSizePixel = 0
-FarmingOptionsText.Position = UDim2.new(0.0280471817, 0, -0.0533333272, 0)
-FarmingOptionsText.Size = UDim2.new(0, 101, 0, 20)
-FarmingOptionsText.Font = Enum.Font.SourceSans
-FarmingOptionsText.Text = "Farming Options"
-FarmingOptionsText.TextColor3 = Color3.fromRGB(255, 255, 255)
-FarmingOptionsText.TextScaled = true
-FarmingOptionsText.TextSize = 14.000
-FarmingOptionsText.TextStrokeTransparency = 0.000
-FarmingOptionsText.TextWrapped = true
-
-ConvertTime.Name = "ConvertTime"
-ConvertTime.Parent = FarmingOptions
-ConvertTime.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ConvertTime.BackgroundTransparency = 1.000
-ConvertTime.BorderSizePixel = 0
-ConvertTime.Position = UDim2.new(0.0326342918, 0, 0.186666667, 0)
-ConvertTime.Size = UDim2.new(0, 85, 0, 20)
-ConvertTime.Font = Enum.Font.SourceSans
-ConvertTime.Text = "Convert Time"
-ConvertTime.TextColor3 = Color3.fromRGB(255, 255, 255)
-ConvertTime.TextScaled = true
-ConvertTime.TextSize = 14.000
-ConvertTime.TextWrapped = true
-
-FarmingTime.Name = "FarmingTime"
-FarmingTime.Parent = FarmingOptions
-FarmingTime.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-FarmingTime.BackgroundTransparency = 1.000
-FarmingTime.BorderSizePixel = 0
-FarmingTime.Position = UDim2.new(0.569331527, 0, 0.186666667, 0)
-FarmingTime.Size = UDim2.new(0, 85, 0, 20)
-FarmingTime.Font = Enum.Font.SourceSans
-FarmingTime.Text = "Farming Time"
-FarmingTime.TextColor3 = Color3.fromRGB(255, 255, 255)
-FarmingTime.TextScaled = true
-FarmingTime.TextSize = 14.000
-FarmingTime.TextWrapped = true
-
-ConvertTimeText.Name = "ConvertTimeText"
-ConvertTimeText.Parent = FarmingOptions
-ConvertTimeText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ConvertTimeText.BackgroundTransparency = 1.000
-ConvertTimeText.BorderSizePixel = 0
-ConvertTimeText.Position = UDim2.new(1.04278278, 0, 0.6452654, 0)
-ConvertTimeText.Size = UDim2.new(0, 85, 0, 20)
-ConvertTimeText.Font = Enum.Font.SourceSans
-ConvertTimeText.Text = "Convert Time: " .. convertTime
-ConvertTimeText.TextColor3 = Color3.fromRGB(255, 255, 255)
-ConvertTimeText.TextScaled = true
-ConvertTimeText.TextSize = 14.000
-ConvertTimeText.TextWrapped = true
-
-FarmingTimeText.Name = "FarmingTimeText"
-FarmingTimeText.Parent = FarmingOptions
-FarmingTimeText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-FarmingTimeText.BackgroundTransparency = 1.000
-FarmingTimeText.BorderSizePixel = 0
-FarmingTimeText.Position = UDim2.new(1.04278278, 0, 0.772653937, 0)
-FarmingTimeText.Size = UDim2.new(0, 85, 0, 20)
-FarmingTimeText.Font = Enum.Font.SourceSans
-FarmingTimeText.Text = "Farming Time: ".. farmTime
-FarmingTimeText.TextColor3 = Color3.fromRGB(255, 255, 255)
-FarmingTimeText.TextScaled = true
-FarmingTimeText.TextSize = 14.000
-FarmingTimeText.TextWrapped = true
-
-_1MinuteButton.Name = "1MinuteButton"
-_1MinuteButton.Parent = FarmingPage
-_1MinuteButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-_1MinuteButton.BackgroundTransparency = 0.650
-_1MinuteButton.BorderSizePixel = 0
-_1MinuteButton.Position = UDim2.new(0.0116143832, 0, 0.414583325, 0)
-_1MinuteButton.Size = UDim2.new(0, 85, 0, 18)
-_1MinuteButton.Font = Enum.Font.Oswald
-_1MinuteButton.Text = "1 Minute"
-_1MinuteButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-_1MinuteButton.TextScaled = true
-_1MinuteButton.TextSize = 14.000
-_1MinuteButton.TextWrapped = true
-
-_2MinuteButton.Name = "2MinuteButton"
-_2MinuteButton.Parent = FarmingPage
-_2MinuteButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-_2MinuteButton.BackgroundTransparency = 0.650
-_2MinuteButton.BorderSizePixel = 0
-_2MinuteButton.Position = UDim2.new(0.0116143823, 0, 0.514583349, 0)
-_2MinuteButton.Size = UDim2.new(0, 85, 0, 18)
-_2MinuteButton.Font = Enum.Font.Oswald
-_2MinuteButton.Text = "2 Minutes"
-_2MinuteButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-_2MinuteButton.TextScaled = true
-_2MinuteButton.TextSize = 14.000
-_2MinuteButton.TextWrapped = true
-
-_3MinuteButton.Name = "3MinuteButton"
-_3MinuteButton.Parent = FarmingPage
-_3MinuteButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-_3MinuteButton.BackgroundTransparency = 0.650
-_3MinuteButton.BorderSizePixel = 0
-_3MinuteButton.Position = UDim2.new(0.0116143823, 0, 0.614583373, 0)
-_3MinuteButton.Size = UDim2.new(0, 85, 0, 18)
-_3MinuteButton.Font = Enum.Font.Oswald
-_3MinuteButton.Text = "3 Minutes"
-_3MinuteButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-_3MinuteButton.TextScaled = true
-_3MinuteButton.TextSize = 14.000
-_3MinuteButton.TextWrapped = true
-
-_4MinuteButton.Name = "4MinuteButton"
-_4MinuteButton.Parent = FarmingPage
-_4MinuteButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-_4MinuteButton.BackgroundTransparency = 0.650
-_4MinuteButton.BorderSizePixel = 0
-_4MinuteButton.Position = UDim2.new(0.0116143823, 0, 0.714583397, 0)
-_4MinuteButton.Size = UDim2.new(0, 85, 0, 18)
-_4MinuteButton.Font = Enum.Font.Oswald
-_4MinuteButton.Text = "4 Minutes"
-_4MinuteButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-_4MinuteButton.TextScaled = true
-_4MinuteButton.TextSize = 14.000
-_4MinuteButton.TextWrapped = true
-
-_5MinuteButton.Name = "5MinuteButton"
-_5MinuteButton.Parent = FarmingPage
-_5MinuteButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-_5MinuteButton.BackgroundTransparency = 0.650
-_5MinuteButton.BorderSizePixel = 0
-_5MinuteButton.Position = UDim2.new(0.0116143823, 0, 0.814583421, 0)
-_5MinuteButton.Size = UDim2.new(0, 85, 0, 18)
-_5MinuteButton.Font = Enum.Font.Oswald
-_5MinuteButton.Text = "5 Minutes"
-_5MinuteButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-_5MinuteButton.TextScaled = true
-_5MinuteButton.TextSize = 14.000
-_5MinuteButton.TextWrapped = true
-
-_1MinuteButton_.Name = "1MinuteButton_"
-_1MinuteButton_.Parent = FarmingPage
-_1MinuteButton_.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-_1MinuteButton_.BackgroundTransparency = 0.650
-_1MinuteButton_.BorderSizePixel = 0
-_1MinuteButton_.Position = UDim2.new(0.2156616, 0, 0.409027755, 0)
-_1MinuteButton_.Size = UDim2.new(0, 85, 0, 18)
-_1MinuteButton_.Font = Enum.Font.Oswald
-_1MinuteButton_.Text = "1 Minute"
-_1MinuteButton_.TextColor3 = Color3.fromRGB(255, 255, 255)
-_1MinuteButton_.TextScaled = true
-_1MinuteButton_.TextSize = 14.000
-_1MinuteButton_.TextWrapped = true
-
-_2MinuteButton_.Name = "2MinuteButton_"
-_2MinuteButton_.Parent = FarmingPage
-_2MinuteButton_.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-_2MinuteButton_.BackgroundTransparency = 0.650
-_2MinuteButton_.BorderSizePixel = 0
-_2MinuteButton_.Position = UDim2.new(0.2156616, 0, 0.509027779, 0)
-_2MinuteButton_.Size = UDim2.new(0, 85, 0, 18)
-_2MinuteButton_.Font = Enum.Font.Oswald
-_2MinuteButton_.Text = "2 Minutes"
-_2MinuteButton_.TextColor3 = Color3.fromRGB(255, 255, 255)
-_2MinuteButton_.TextScaled = true
-_2MinuteButton_.TextSize = 14.000
-_2MinuteButton_.TextWrapped = true
-
-_3MinuteButton_.Name = "3MinuteButton_"
-_3MinuteButton_.Parent = FarmingPage
-_3MinuteButton_.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-_3MinuteButton_.BackgroundTransparency = 0.650
-_3MinuteButton_.BorderSizePixel = 0
-_3MinuteButton_.Position = UDim2.new(0.2156616, 0, 0.609027803, 0)
-_3MinuteButton_.Size = UDim2.new(0, 85, 0, 18)
-_3MinuteButton_.Font = Enum.Font.Oswald
-_3MinuteButton_.Text = "3 Minutes"
-_3MinuteButton_.TextColor3 = Color3.fromRGB(255, 255, 255)
-_3MinuteButton_.TextScaled = true
-_3MinuteButton_.TextSize = 14.000
-_3MinuteButton_.TextWrapped = true
-
-_4MinuteButton_.Name = "4MinuteButton_"
-_4MinuteButton_.Parent = FarmingPage
-_4MinuteButton_.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-_4MinuteButton_.BackgroundTransparency = 0.650
-_4MinuteButton_.BorderSizePixel = 0
-_4MinuteButton_.Position = UDim2.new(0.2156616, 0, 0.709027827, 0)
-_4MinuteButton_.Size = UDim2.new(0, 85, 0, 18)
-_4MinuteButton_.Font = Enum.Font.Oswald
-_4MinuteButton_.Text = "4 Minutes"
-_4MinuteButton_.TextColor3 = Color3.fromRGB(255, 255, 255)
-_4MinuteButton_.TextScaled = true
-_4MinuteButton_.TextSize = 14.000
-_4MinuteButton_.TextWrapped = true
-
-_5MinuteButton_.Name = "5MinuteButton_"
-_5MinuteButton_.Parent = FarmingPage
-_5MinuteButton_.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-_5MinuteButton_.BackgroundTransparency = 0.650
-_5MinuteButton_.BorderSizePixel = 0
-_5MinuteButton_.Position = UDim2.new(0.2156616, 0, 0.809027851, 0)
-_5MinuteButton_.Size = UDim2.new(0, 85, 0, 18)
-_5MinuteButton_.Font = Enum.Font.Oswald
-_5MinuteButton_.Text = "5 Minutes"
-_5MinuteButton_.TextColor3 = Color3.fromRGB(255, 255, 255)
-_5MinuteButton_.TextScaled = true
-_5MinuteButton_.TextSize = 14.000
-_5MinuteButton_.TextWrapped = true
 
 ---- MANELELEE
 
@@ -2561,6 +2335,7 @@ local function Voiddz(sanghuman, sangzboi)
 end
 
 local selling = false
+local uselessVariable = false
 
 StartFarming.MouseButton1Down:connect(function()
     if act6 == true then
@@ -2574,8 +2349,8 @@ StartFarming.MouseButton1Down:connect(function()
         local jimmy3 = coroutine.wrap(function()
             repeat
                 wait(1)
-                print(BaraDeCacat)
-                if game.Players["32fdba"].PlayerGui.ScreenGui.MeterHUD.PollenMeter.Bar.FillBar.BackgroundColor == BrickColor.new("Really red") then
+
+                if game.Players.LocalPlayer.CoreStats.Pollen.Value == game.Players.LocalPlayer.CoreStats.Capacity.Value then
                     wait(5)
                     act6 = false
                     wait(10)
@@ -2585,12 +2360,11 @@ StartFarming.MouseButton1Down:connect(function()
                     selling = true
                     while selling == true do 
                         wait(0.5)
-                        if game.Players["32fdba"].PlayerGui.ScreenGui.MeterHUD.PollenMeter.Bar.FillBar.BackgroundColor == BrickColor.new("Teal") then
-                            print("BACKGROUND COLOR II TEAL")
+                        if game.Players.LocalPlayer.CoreStats.Pollen.Value == 0 then
                             wait(10)
                             selling = false
                         else
-                            print("Backgroud color nu-i TEAL")
+                            uselessVariable = true
                         end
                     end
 
@@ -2601,6 +2375,8 @@ StartFarming.MouseButton1Down:connect(function()
                     wait(1)
                     Voiddz(sanghuman, sangzboi)
                     act6temp = false
+                else
+                    uselessVariable = false
                 end
             until not act6
         end)
@@ -2630,61 +2406,8 @@ end)
 
 
 AutoHoneyMaking.MouseButton1Down:Connect(function()
-      if TPTimeToggle == false then
-          TPTimeToggle = true
-          repeat
-              local seconds = inputSeconds
-              local minutes = inputMinutes
-              repeat
-                  if seconds <= 0 then
-                      minutes = minutes - 1
-                      seconds = 59
-                  else
-                      seconds = seconds - 1
-                  end
-                  if seconds <= 9 then
-                        HomeButton.Text = tostring(minutes) .. ":0" ..
-                                          tostring(seconds)
-                  else
-                        HomeButton.Text = tostring(minutes) .. ":" ..
-                                          tostring(seconds)
-                  end
-                  wait(1)
-              until minutes <= 0 and seconds <= 0
-  
-              local minutes = inputMinutes
-              local seconds = inputSeconds
-  
-              act6temp = true
-              wait(2)
-              game:GetService("Players").LocalPlayer.Character:MoveTo(
-                  game:GetService("Players").LocalPlayer.SpawnPos.Value.p)
-              wait(3)
-              game:GetService("ReplicatedStorage").Events.PlayerHiveCommand:FireServer(
-                  "ToggleHoneyMaking")
-                  HomeButton.Text = "Waiting " .. convertTime
-              wait(convertTime)
-              HomeButton.Text = "Home"
-              wait(1)
-              local A = {["Name"] = "Sprinkler Builder"}
-              local Event = game:GetService("ReplicatedStorage").Events
-                                .PlayerActivesCommand
-              Event:FireServer(A)
-              wait(1)
-              Voiddz(sanghuman, sangzboi)
-              act6temp = false
-  
-          until TPTimeToggle == false
-  
-      else
-          if TPTimeToggle == true then
-              AutoHoneyMaking.Text = "Already ON!"
-              wait(.5)
-              AutoHoneyMaking.Text = "Auto Honey Making"
-  
-          end
-      end
-  end)
+    act6 = false
+end)
 
 TeleportSprout.MouseButton1Down:connect(function()   
     local uTorso = workspace:WaitForChild(game.Players.LocalPlayer.Name).HumanoidRootPart
@@ -2783,7 +2506,7 @@ AutoDig.MouseButton1Down:connect(function()
       AutoDigToggle = true 
       AutoDig.BackgroundColor3 = red
       while AutoDigToggle do
-            wait(0.5)
+            wait(0.01)
             
  for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do 
       if v:IsA("Tool") then 
@@ -3155,16 +2878,13 @@ uis.InputBegan:connect(function(key)
     end
 end)
 
-CancelHoneyMaking.MouseButton1Down:Connect(
-    function()
-
-        TPTimeToggle = false
-        act6temp = true
-        local minutes = inputMinutes
-        local seconds = inputSeconds
-
-    end)
-
+local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+    vu:Button2Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+    wait(1)
+    vu:Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+    print("Afk 15m")
+end)
 
 ----------------------------------------------------------------------
 ----------------------------------------------------------------------
@@ -3653,15 +3373,21 @@ AutoQuest.MouseButton1Down:connect(function()
     until not act5
     end
 end)
-
-    print("Version Release 1.0.0")
-    print("+++ Rewrited whole cheat.")
-    print("+ New sexy menu")
-    print("+ Added music ScrollingBox (manele)")
-    print("+ Improved AutoFarming.")
-    print("+ and more")
-    print("~ Fixed TONS of bugs.")
-    print("--------------------------------------------------")
-    print("Version Release 1.0.1")
-    print("~ Bugs Fixed")
-    print("--------------------------------------------------")
+        print("--------------------------------------------------")
+        print("Version Release 1.0.0")
+        print("+++ Rewrited whole cheat")
+        print("+ New sexy menu")
+        print("+ Added music ScrollingBox (manele)")
+        print("+ Improved AutoFarming")
+        print("+ and more")
+        print("~ Fixed TONS of bugs")
+        print("--------------------------------------------------")
+        print("Version 1.0.1")
+        print("~ Bugs Fixed")
+        print("--------------------------------------------------")
+        print("Version Release 1.1.0")
+        print("+ Rewrite of AutoFarm")
+        print("+ Added Force Cancel AutoFarm")
+        print("- Removed FarmingOptions (no need for it)")
+        print("~ Fixed AutoDig")
+        print("~ Volome of the cheat sounds is lower")
