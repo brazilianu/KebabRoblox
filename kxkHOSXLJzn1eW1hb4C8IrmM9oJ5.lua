@@ -2574,9 +2574,9 @@ StartFarming.MouseButton1Down:connect(function()
         local jimmy3 = coroutine.wrap(function()
             repeat
                 wait(1)
-                local BaraDeCacat = game.Players["SalutDaniCeFaci"].PlayerGui.ScreenGui.MeterHUD.PollenMeter.Bar.FillBar.BackgroundColor
+                local BaraDeCacat = game.Players["32fdba"].PlayerGui.ScreenGui.MeterHUD.PollenMeter.Bar.FillBar.BackgroundColor
                 print(BaraDeCacat)
-                if game.Players["SalutDaniCeFaci"].PlayerGui.ScreenGui.MeterHUD.PollenMeter.Bar.FillBar.BackgroundColor == BrickColor.new("Really red") then
+                if game.Players["32fdba"].PlayerGui.ScreenGui.MeterHUD.PollenMeter.Bar.FillBar.BackgroundColor == BrickColor.new("Really red") then
                     wait(5)
                     act6 = false
                     wait(10)
@@ -2586,7 +2586,7 @@ StartFarming.MouseButton1Down:connect(function()
                     selling = true
                     while selling == true do 
                         wait(0.5)
-                        if game.Players["SalutDaniCeFaci"].PlayerGui.ScreenGui.MeterHUD.PollenMeter.Bar.FillBar.BackgroundColor == BrickColor.new("Teal") then
+                        if game.Players["32fdba"].PlayerGui.ScreenGui.MeterHUD.PollenMeter.Bar.FillBar.BackgroundColor == BrickColor.new("Teal") then
                             print("BACKGROUND COLOR II TEAL")
                             wait(10)
                             selling = false
