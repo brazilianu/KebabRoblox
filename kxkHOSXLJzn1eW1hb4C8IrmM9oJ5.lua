@@ -2574,7 +2574,6 @@ StartFarming.MouseButton1Down:connect(function()
         local jimmy3 = coroutine.wrap(function()
             repeat
                 wait(1)
-                local BaraDeCacat = game.Players["32fdba"].PlayerGui.ScreenGui.MeterHUD.PollenMeter.Bar.FillBar.BackgroundColor
                 print(BaraDeCacat)
                 if game.Players["32fdba"].PlayerGui.ScreenGui.MeterHUD.PollenMeter.Bar.FillBar.BackgroundColor == BrickColor.new("Really red") then
                     wait(5)
