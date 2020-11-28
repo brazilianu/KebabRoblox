@@ -4,7 +4,7 @@
 -- Gui to Lua PLUGIN
 -- Instances:
 
-local CheatVersion = "1.0.1"
+local CheatVersion = "1.0.2"
 
 for _, v in pairs(game.workspace.Collectibles:GetChildren()) do
     if string.find(v.Name, "") then v:Destroy() end
@@ -366,7 +366,7 @@ Notice.BorderSizePixel = 0
 Notice.Position = UDim2.new(0.0142857144, 0, 0.239999995, 0)
 Notice.Size = UDim2.new(0, 300, 0, 20)
 Notice.Font = Enum.Font.SourceSans
-Notice.Text = "(!) Read the console for more informations!"
+Notice.Text = "(!) Read the console for more informations! [F9]"
 Notice.TextColor3 = Color3.fromRGB(255, 255, 255)
 Notice.TextSize = 18.000
 Notice.TextWrapped = true
@@ -2560,6 +2560,8 @@ local function Voiddz(sanghuman, sangzboi)
     jimmy2()
 end
 
+local selling = false
+
 StartFarming.MouseButton1Down:connect(function()
     if act6 == true then
         act6 = false
@@ -2572,44 +2574,35 @@ StartFarming.MouseButton1Down:connect(function()
         local jimmy3 = coroutine.wrap(function()
             repeat
                 wait(1)
-                for k, v in pairs(workspace[player.Name]:GetChildren()) do
-                    if v:FindFirstChild("Display") then
-                        if v.Display.Gui.ProgressBar.Size ==
-                            v.Display.Gui.RedBar.Size or
-                            v.Display.Gui.ProgressLabel ==
-                            player.CoreStats.Pollen.Value .. "/" ..
-                            player.CoreStats.Pollen.Value then
-                            act6temp = true
-                            wait(3)
-                            local sanghuman = player.Character.HumanoidRootPart
-                            local hotboi = sanghuman.CFrame
-                            local sangzboi =
-                                workspace.FlowerZones[tuoidz].CFrame
-                            game:GetService("Players").LocalPlayer.Character:MoveTo(
-                                game:GetService("Players").LocalPlayer.SpawnPos
-                                    .Value.p)
-                            wait(3)
-                            game:GetService("ReplicatedStorage").Events
-                                .PlayerHiveCommand:FireServer(
-                                "ToggleHoneyMaking")
-                            repeat wait(.1) until player.CoreStats.Pollen.Value <=
-                                600
-                            wait(7)
-                            sanghuman.CFrame = sangzboi * CFrame.new(0, 0, 0)
-                            wait(1)
-                            local A = {["Name"] = "Sprinkler Builder"}
-                            local Event =
-                                game:GetService("ReplicatedStorage").Events
-                                    .PlayerActivesCommand
-                            Event:FireServer(A)
-                            wait(1)
-                            Voiddz(sanghuman, sangzboi)
-                            act6temp = false
+                local BaraDeCacat = game.Players["SalutDaniCeFaci"].PlayerGui.ScreenGui.MeterHUD.PollenMeter.Bar.FillBar.BackgroundColor
+                print(BaraDeCacat)
+                if game.Players["SalutDaniCeFaci"].PlayerGui.ScreenGui.MeterHUD.PollenMeter.Bar.FillBar.BackgroundColor == BrickColor.new("Really red") then
+                    wait(5)
+                    act6 = false
+                    wait(10)
+                    game:GetService("Players").LocalPlayer.Character:MoveTo(game:GetService("Players").LocalPlayer.SpawnPos.Value.p)
+                    wait(3)
+                    game:GetService("ReplicatedStorage").Events.PlayerHiveCommand:FireServer("ToggleHoneyMaking")
+                    selling = true
+                    while selling == true do 
+                        wait(0.5)
+                        if game.Players["SalutDaniCeFaci"].PlayerGui.ScreenGui.MeterHUD.PollenMeter.Bar.FillBar.BackgroundColor == BrickColor.new("Teal") then
+                            print("BACKGROUND COLOR II TEAL")
+                            wait(10)
+                            selling = false
+                        else
+                            print("Backgroud color nu-i TEAL")
                         end
                     end
+
+                    local A = {["Name"] = "Sprinkler Builder"}
+                    local Event = game:GetService("ReplicatedStorage").Events.PlayerActivesCommand
+                    Event:FireServer(A)
+                    act6 = true
                     wait(1)
+                    Voiddz(sanghuman, sangzboi)
+                    act6temp = false
                 end
-                wait(1)
             until not act6
         end)
         Voiddz(sanghuman, sangzboi)
@@ -3173,12 +3166,6 @@ CancelHoneyMaking.MouseButton1Down:Connect(
 
     end)
 
-
-while true do
-    wait(0.05)
-    local BaraDeCacat = game.Players.SalutDaniCeFaci.PlayerGui.ScreenGui.MeterHUD.PollenMeter.Bar.FillBar.BackgroundColor3
-    print(BaraDeCacat)
-end
 
 ----------------------------------------------------------------------
 ----------------------------------------------------------------------
